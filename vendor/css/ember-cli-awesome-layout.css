@@ -1,0 +1,25 @@
+.awesome-layout {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.awesome-sidebar {
+  background: pink;
+}
+
+.awesome-header {
+  background: yellow;
+}
+
+.awesome-container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.fifty {
+  width: 50vw;
+}
+
+.twenty {
+  width: 20vw;
+}
