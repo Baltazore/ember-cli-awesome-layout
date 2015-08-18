@@ -11,8 +11,8 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{awesome-header}}`);
+  this.render(hbs`{{awesome-header title='Hello'}}`);
 
-  assert.equal(this.$().text().trim(), 'Hello from header');
+  assert.equal(this.$().text().trim(), 'Hello');
 
 });

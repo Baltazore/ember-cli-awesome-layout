@@ -11,19 +11,19 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{awesome-layout}}`);
+  this.render(hbs`{{awesome-layout header-title='Hello from header'}}`);
 
   assert.equal(this.$('.awesome-header').text().trim(), 'Hello from header');
   assert.equal(this.$('.awesome-sidebar').text().trim(), 'hello from sidebar');
 
   // Template block usage:
   this.render(hbs`
-    {{#awesome-layout}}
+    {{#awesome-layout header-title='Hello'}}
       <p>template block text</p>
     {{/awesome-layout}}
   `);
 
-  assert.equal(this.$('.awesome-header').text().trim(), 'Hello from header');
+  assert.equal(this.$('.awesome-header').text().trim(), 'Hello');
   assert.equal(this.$('.awesome-sidebar').text().trim(), 'hello from sidebar');
   assert.equal(this.$('p').text().trim(), 'template block text');
 });
